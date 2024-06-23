@@ -1,0 +1,25 @@
+<html>
+<body bgcolor="#c5dec9" align="center">
+<h2>Ingresar al sistema</h2>
+
+<table border="2" align="center">
+<tr>
+<td>Usuario</td>
+<td><input type="text" name="usuario"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password"></td>
+</tr>
+<tr>
+<td colspan="2"  align="center" >
+
+<h2 align="center">
+<button onclick="window.location.href='RegistrarProductos.jsp'">Ingresar</button>
+</h2>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

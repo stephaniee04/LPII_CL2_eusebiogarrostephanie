@@ -1,0 +1,6 @@
+package Interfaces;
+
+public interface IProducto {
+	public void RegistrarCliente(TblProducto producto);
+	public List<TblProducto> ListadoCliente();
+}

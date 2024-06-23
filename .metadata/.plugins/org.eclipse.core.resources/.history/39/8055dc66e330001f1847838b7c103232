@@ -1,0 +1,45 @@
+package TestEntidades;
+
+import java.util.List;
+
+import Dao.ClassProductoImp;
+import model.TblProductocl2;
+
+public class TestEntidadProducto {
+
+	public static void main(String[] args) {
+		//realizamos la respectiva instancia de las clases..
+		TblProductocl2 producto=new TblProductocl2 ();
+		ClassProductoImp crud=new ClassProductoImp();
+		
+		//asignamos valores
+		producto.setNombrecl2("nilson ronaldo");
+		producto.setPrecioventacl2(200);
+		producto.setPreciocompcl2(1045);
+		producto.setEstadocl2("nilson@gmail.com");
+		producto.setDescripcl2("3871459");
+		//invocamos al metodo registrar...
+		//crud.RegistrarCliente(cliente);
+
+		//Listado
+		List<TblProductocl2> listado = crud.ListadoProducto();
+				
+		//Aplicamos bucle For
+				
+		for(TblProductocl2 lis:listado) {
+			//imprimimos en pantalla
+			System.out.println("codigo "+lis.getIdproductocl2()+
+							" nombre :"+lis.getNombrecl2()+
+		                    " apellido :"+lis.getApellido()+
+		                    " DNI :"+lis.getDni()+
+		                    " email :"+lis.getEmail()+
+		                    "telefono: "+ lis.getTelf()+
+		                    "sexo: "+lis.getSexo()+
+		                    "nacionalidad: "+lis.getNacionalidad());		
+				}
+				
+				
+			}   //fin del metodo main...
+		
+		
+}//fin de la clase..

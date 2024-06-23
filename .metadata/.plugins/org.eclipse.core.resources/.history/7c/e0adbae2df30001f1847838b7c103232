@@ -1,0 +1,8 @@
+package Interfaces;
+
+import model.TblProductocl2;
+
+public interface IProducto {
+	public void RegistrarCliente(TblProductocl2 producto);
+	public List<TblProducto> ListadoCliente();
+}

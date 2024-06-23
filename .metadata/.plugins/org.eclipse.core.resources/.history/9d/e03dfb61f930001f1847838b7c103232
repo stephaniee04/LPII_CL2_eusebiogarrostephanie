@@ -1,0 +1,6 @@
+<html>
+<body bgcolor="#c5dec9" align="center">
+<h2 >MENU PRINCIPAL</h2>
+<a href="RegistrarProductos.jsp" style="text-decoration:none;color:blue;"> REGISTRAR PRODUCTO</a>
+</body>
+</html>

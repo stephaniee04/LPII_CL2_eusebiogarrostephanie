@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>Ingresar al sistema</h2>
+
+<table border="2" align="center">
+<tr>
+<td>Nombre</td>
+<td><input type="text" name="nombre"></td>
+</tr>
+<tr>
+<td>Precio Venta</td>
+<td><input type="number" name="precioVenta"></td>
+</tr>
+
+</body>
+</html>

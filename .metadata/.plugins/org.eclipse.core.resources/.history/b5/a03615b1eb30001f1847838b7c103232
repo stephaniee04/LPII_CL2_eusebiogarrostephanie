@@ -1,0 +1,66 @@
+package Controlador;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Dao.ClassProductoImp;
+import model.TblProductocl2;
+
+/**
+ * Servlet implementation class ControladorProducto
+ */
+public class ControladorProducto extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ControladorProducto() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	} //fin del metodo do get
+
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//recuperamos los valores del formulario...
+				String nombre=request.getParameter("nombre");
+				String precioventa=request.getParameter("precioventa");
+				String preciocomp=request.getParameter("preciocomp");
+				String estado=request.getParameter("estado");
+				String descripcion=request.getParameter("descripcion");
+				
+				//instanciar las respectivas entidades...
+				TblProductocl2 producto=new TblProductocl2();
+				ClassProductoImp crud=new ClassProductoImp();
+				//asignamos valores
+				producto.setNombrecl2(nombre);
+				producto.setPrecioventacl2(precioventa);
+				producto.setPreciocompcl2(preciocomp);
+				producto.setEstadocl2(estado);
+				producto.setDescripcl2(descripcion);
+				//invocamos la metodo registrar...
+				//actualizar listado de productos
+				List<TblProducto> listadocliente=crud.ListadoProducto();
+				//invocamos el listado de proudctos para la vista
+				request.setAttribute("listadoclientes", listadocliente);
+				//redireccionamos
+				request.getRequestDispatcher("/ListadoClientes.jsp").forward(request, response);
+	} //fin del metodo do post
+
+}

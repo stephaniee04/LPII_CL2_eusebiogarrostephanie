@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title >Listado Productos registrados en la BD</title>
+</head>
+<body bgcolor="#c5dec9">
+
+
+
+
+<h1  align="center">Listado de Productos registrados en BD</h1>
+
+<h2 align="center"></h2>
+<a href="RegistrarProducto.jsp" style="text-decoration:none;color:blue;"> Registrar Producto</a>
+<table border="2" align="center">
+<tr>
+<td>Nombre</td>
+<td>Precio Venta</td>
+<td>Precio Compra</td>
+<td>Estado</td>
+<td>Descripcion</td>
+</tr>
+
+<%
+List<TblProductocl2> listado=(List<TblProductocl2>)request.getAttribute("listadoproductos");
+//aplicamos una condicion..
+if(listado!=null){
+	//aplicamos un bucle for..
+	for(TblProductocl2 lis:listado){
+		%>
+		<tr>
+		<td><%=lis.getIdproductocl2() %></td>
+		<td><%=lis.getNombre() %></td>
+		<td><%=lis.getApellido() %></td>
+		<td><%=lis.getDni() %></td>
+		<td><%=lis.getTelf() %></td>
+		<td><%=lis.getSexo() %></td>
+		</tr>
+ <%
+	}  //fin del bucle for...
+    %>
+	<%
+} //fin de la condicion ...
+
+%>
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

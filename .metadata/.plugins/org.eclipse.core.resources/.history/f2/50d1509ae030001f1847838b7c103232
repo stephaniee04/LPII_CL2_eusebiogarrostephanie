@@ -1,0 +1,20 @@
+package Dao;
+
+import java.util.List;
+
+import Interfaces.IProducto;
+import model.TblProductocl2;
+
+public class ClassProductoImp implements IProducto{
+
+	public void RegistrarCliente(TblProductocl2 producto) {
+		
+		
+	} //fin del metodo registrar...
+
+	public List<TblProductocl2> ListadoCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}//fin del metodo listado..
+
+}
